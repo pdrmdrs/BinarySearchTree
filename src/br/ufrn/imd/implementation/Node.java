@@ -1,4 +1,4 @@
-package br.imd.ufrn.implementation;
+package br.ufrn.imd.implementation;
 
 /**
  * 

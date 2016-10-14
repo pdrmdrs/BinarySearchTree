@@ -22,7 +22,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#Node()}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#Node()}.
 	 */
 	@Test
 	public void testNode() {
@@ -30,7 +30,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#Node(java.lang.Object)}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#Node(java.lang.Object)}.
 	 */
 	@Test
 	public void testNodeT() {
@@ -38,7 +38,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#Node(java.lang.Object, br.imd.ufrn.implementation.Node, br.imd.ufrn.implementation.Node)}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#Node(java.lang.Object, br.ufrn.imd.implementation.Node, br.ufrn.imd.implementation.Node)}.
 	 */
 	@Test
 	public void testNodeTNodeOfTNodeOfT() {
@@ -46,7 +46,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#getValue()}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#getValue()}.
 	 */
 	@Test
 	public void testGetValue() {
@@ -54,7 +54,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#setValue(java.lang.Object)}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#setValue(java.lang.Object)}.
 	 */
 	@Test
 	public void testSetValue() {
@@ -62,7 +62,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#getLeft()}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#getLeft()}.
 	 */
 	@Test
 	public void testGetLeft() {
@@ -70,7 +70,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#setLeft(br.imd.ufrn.implementation.Node)}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#setLeft(br.ufrn.imd.implementation.Node)}.
 	 */
 	@Test
 	public void testSetLeft() {
@@ -78,7 +78,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#getRight()}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#getRight()}.
 	 */
 	@Test
 	public void testGetRight() {
@@ -86,7 +86,7 @@ public class NodeTest {
 	}
 
 	/**
-	 * Test method for {@link br.imd.ufrn.implementation.Node#setRight(br.imd.ufrn.implementation.Node)}.
+	 * Test method for {@link br.ufrn.imd.implementation.Node#setRight(br.ufrn.imd.implementation.Node)}.
 	 */
 	@Test
 	public void testSetRight() {
