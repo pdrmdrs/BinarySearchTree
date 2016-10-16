@@ -9,7 +9,7 @@ import br.ufrn.imd.interfaces.NodeInterface;
  * @author Pedro Paulo Paiva de Medeiros
  *
  */
-public class Node<T> implements NodeInterface{
+public class Node<T> implements NodeInterface<T>{
 	/**
 	 * Using the generic type to represent the value of this node
 	 */
