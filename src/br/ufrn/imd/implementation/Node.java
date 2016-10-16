@@ -183,4 +183,22 @@ public class Node<T> implements NodeInterface{
 			return false;
 		return true;
 	}
+
+	/* (non-Javadoc)
+	 * @see br.ufrn.imd.interfaces.NodeInterface#greaterThan(java.lang.Object)
+	 */
+	@Override
+	public boolean greaterThan(Object value) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	/* (non-Javadoc)
+	 * @see br.ufrn.imd.interfaces.NodeInterface#smallerThan(java.lang.Object)
+	 */
+	@Override
+	public boolean smallerThan(Object value) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

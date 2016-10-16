@@ -84,7 +84,7 @@ public class Tree<T> implements TreeInterface<T> {
 			if (element == actualNode.getValue()) {
 				actualNode.incrementCount();
 				inserted = true;
-			} else if (actualNode.smallerThan(element))) {
+			} else if (actualNode.smallerThan(element)) {
 				actualNode = actualNode.getRight();
 			} else if (actualNode.greaterThan(element)) {
 				actualNode = actualNode.getLeft();
