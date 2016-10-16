@@ -78,18 +78,34 @@ public class Tree<T> implements TreeInterface<T> {
 	public void insert(T element) {
 		Node<T> actualNode = this.root;
 		
-		boolean inserted = false;
-		
+		boolean finded = false;
+		//search for the node where the new value should be inserted
 		do {
 			if (element == actualNode.getValue()) {
-				actualNode.incrementCount();
-				inserted = true;
+				finded = true;
 			} else if (actualNode.smallerThan(element)) {
-				actualNode = actualNode.getRight();
+				if(actualNode.getRight() != null){
+					actualNode = actualNode.getRight();
+				} else {
+					finded = true;
+				}
 			} else if (actualNode.greaterThan(element)) {
-				actualNode = actualNode.getLeft();
+				if(actualNode.getLeft() != null){
+					actualNode = actualNode.getLeft();
+				} else {
+					finded = true;
+				}
 			}
-		}while(actualNode.getLeft() != null && actualNode.getRight() != null && !inserted);
+		}while(!finded);
+		
+		//insert the new node
+		if(element == actualNode.getValue()){
+			actualNode.incrementCount();
+		} else if (actualNode.smallerThan(element)) {
+			actualNode.setRight(new Node<T>(element));
+		} else if (actualNode.greaterThan(element)) {
+			actualNode.setLeft(new Node<T>(element));
+		}
 	}
 
 	/*
@@ -100,7 +116,7 @@ public class Tree<T> implements TreeInterface<T> {
 	@Override
 	public void delete(T element) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	/*
