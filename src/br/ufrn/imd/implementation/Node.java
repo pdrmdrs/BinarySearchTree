@@ -9,25 +9,26 @@ import br.ufrn.imd.interfaces.NodeInterface;
  * @author Pedro Paulo Paiva de Medeiros
  *
  */
-public class Node<T> implements NodeInterface<T>{
+public class Node implements NodeInterface {
 	/**
-	 * Using the generic type to represent the value of this node
+	 * Using the Double class to represent the value of this node
 	 */
-	private T value;
+	private Double value;
 
 	/**
 	 * The left node of this node
 	 */
-	private Node<T> left;
+	private Node left;
 
 	/**
 	 * The right node of this node
 	 */
-	private Node<T> right;
-	
+	private Node right;
+
 	/**
-	 * The counter of this node, representing how many times this node with this value was added to the tree
-	 * This starts with 1 because every node was added at least one time at the tree
+	 * The counter of this node, representing how many times this node with this
+	 * value was added to the tree This starts with 1 because every node was
+	 * added at least one time at the tree
 	 */
 	private int count = 1;
 
@@ -39,6 +40,78 @@ public class Node<T> implements NodeInterface<T>{
 	}
 
 	/**
+	 * Constructor of the node, accepting the int as parameter of value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 */
+	public Node(int value) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRightNull();
+	}
+
+	/**
+	 * Constructor of the node, accepting the double as parameter of value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 */
+	public Node(double value) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRightNull();
+	}
+
+	/**
+	 * Constructor of the node, accepting the float as parameter of value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 */
+	public Node(float value) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRightNull();
+	}
+
+	/**
+	 * Constructor of the node, accepting the long as parameter of value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 */
+	public Node(long value) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRightNull();
+	}
+
+	/**
+	 * Constructor of the node, accepting the short as parameter of value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 */
+	public Node(short value) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRightNull();
+	}
+
+	/**
+	 * Constructor of the node, accepting the byte as parameter of value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 */
+	public Node(byte value) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRightNull();
+	}
+
+	/**
 	 * 
 	 * Constructor of the node. This constructor only receives the value of the
 	 * node, seting the left and right to null
@@ -46,11 +119,124 @@ public class Node<T> implements NodeInterface<T>{
 	 * @param value
 	 *            the value of the node
 	 */
-	public Node(T value) {
+	public Node(Double value) {
 		super();
 		this.value = value;
-		this.left = null;
-		this.right = null;
+		this.setLeftRightNull();
+	}
+
+	/**
+	 * 
+	 * Constructor of the node. This constructor receives all values, for the
+	 * case to insert some node in the tree and receives an int as parameter of
+	 * the value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 * @param left
+	 *            the left to set
+	 * @param right
+	 *            the right to set
+	 */
+	public Node(int value, Node left, Node right) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRight(left, right);
+	}
+
+	/**
+	 * 
+	 * Constructor of the node. This constructor receives all values, for the
+	 * case to insert some node in the tree and receives an double as parameter
+	 * of the value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 * @param left
+	 *            the left to set
+	 * @param right
+	 *            the right to set
+	 */
+	public Node(double value, Node left, Node right) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRight(left, right);
+	}
+
+	/**
+	 * 
+	 * Constructor of the node. This constructor receives all values, for the
+	 * case to insert some node in the tree and receives an float as parameter
+	 * of the value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 * @param left
+	 *            the left to set
+	 * @param right
+	 *            the right to set
+	 */
+	public Node(float value, Node left, Node right) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRight(left, right);
+	}
+
+	/**
+	 * 
+	 * Constructor of the node. This constructor receives all values, for the
+	 * case to insert some node in the tree and receives an long as parameter of
+	 * the value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 * @param left
+	 *            the left to set
+	 * @param right
+	 *            the right to set
+	 */
+	public Node(long value, Node left, Node right) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRight(left, right);
+	}
+
+	/**
+	 * 
+	 * Constructor of the node. This constructor receives all values, for the
+	 * case to insert some node in the tree and receives an short as parameter
+	 * of the value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 * @param left
+	 *            the left to set
+	 * @param right
+	 *            the right to set
+	 */
+	public Node(short value, Node left, Node right) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRight(left, right);
+	}
+
+	/**
+	 * 
+	 * Constructor of the node. This constructor receives all values, for the
+	 * case to insert some node in the tree and receives an byte as parameter of
+	 * the value
+	 * 
+	 * @param value
+	 *            the value of the node
+	 * @param left
+	 *            the left to set
+	 * @param right
+	 *            the right to set
+	 */
+	public Node(byte value, Node left, Node right) {
+		super();
+		this.value = new Double(value);
+		this.setLeftRight(left, right);
 	}
 
 	/**
@@ -65,9 +251,30 @@ public class Node<T> implements NodeInterface<T>{
 	 * @param right
 	 *            the right to set
 	 */
-	public Node(T value, Node<T> left, Node<T> right) {
+	public Node(Double value, Node left, Node right) {
 		super();
 		this.value = value;
+		this.setLeftRight(left, right);
+	}
+
+	/**
+	 * Auxiliar function to avoid code repetition, setting the Left and Right
+	 * nodes to null
+	 */
+	private void setLeftRightNull() {
+		this.left = null;
+		this.right = null;
+	}
+
+	/**
+	 * 
+	 * Auxiliar function to avoid code repetition, setting the Left and Right
+	 * nodes
+	 * 
+	 * @param left
+	 * @param right
+	 */
+	private void setLeftRight(Node left, Node right) {
 		this.left = left;
 		this.right = right;
 	}
@@ -75,7 +282,7 @@ public class Node<T> implements NodeInterface<T>{
 	/**
 	 * @return the value
 	 */
-	public T getValue() {
+	public Double getValue() {
 		return value;
 	}
 
@@ -83,14 +290,14 @@ public class Node<T> implements NodeInterface<T>{
 	 * @param value
 	 *            the value to set
 	 */
-	public void setValue(T value) {
+	public void setValue(Double value) {
 		this.value = value;
 	}
 
 	/**
 	 * @return the left
 	 */
-	public Node<T> getLeft() {
+	public Node getLeft() {
 		return left;
 	}
 
@@ -98,14 +305,14 @@ public class Node<T> implements NodeInterface<T>{
 	 * @param left
 	 *            the left to set
 	 */
-	public void setLeft(Node<T> left) {
+	public void setLeft(Node left) {
 		this.left = left;
 	}
 
 	/**
 	 * @return the right
 	 */
-	public Node<T> getRight() {
+	public Node getRight() {
 		return right;
 	}
 
@@ -113,7 +320,7 @@ public class Node<T> implements NodeInterface<T>{
 	 * @param right
 	 *            the right to set
 	 */
-	public void setRight(Node<T> right) {
+	public void setRight(Node right) {
 		this.right = right;
 	}
 
@@ -125,12 +332,13 @@ public class Node<T> implements NodeInterface<T>{
 	}
 
 	/**
-	 * @param count the count to set
+	 * @param count
+	 *            the count to set
 	 */
 	public void setCount(int count) {
 		this.count = count;
 	}
-	
+
 	/**
 	 * Method to increment the counter of this node
 	 */
@@ -138,7 +346,9 @@ public class Node<T> implements NodeInterface<T>{
 		this.count++;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -152,7 +362,9 @@ public class Node<T> implements NodeInterface<T>{
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -163,7 +375,7 @@ public class Node<T> implements NodeInterface<T>{
 			return false;
 		if (!(obj instanceof Node))
 			return false;
-		Node<?> other = (Node<?>) obj;
+		Node other = (Node) obj;
 		if (count != other.count)
 			return false;
 		if (left == null) {
@@ -184,21 +396,29 @@ public class Node<T> implements NodeInterface<T>{
 		return true;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see br.ufrn.imd.interfaces.NodeInterface#greaterThan(java.lang.Object)
 	 */
 	@Override
-	public boolean greaterThan(Object value) {
-		// TODO Auto-generated method stub
+	public boolean greaterThan(Double value) {
+		if(this.value.compareTo(value) > 0) {
+			return true;
+		}
 		return false;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see br.ufrn.imd.interfaces.NodeInterface#smallerThan(java.lang.Object)
 	 */
 	@Override
-	public boolean smallerThan(Object value) {
-		// TODO Auto-generated method stub
+	public boolean smallerThan(Double value) {
+		if(this.value.compareTo(value) < 0) {
+			return true;
+		}
 		return false;
 	}
 }

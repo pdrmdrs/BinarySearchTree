@@ -10,7 +10,7 @@ package br.ufrn.imd.interfaces;
  * @author Pedro Paulo Paiva de Medeiros
  *
  */
-public interface NodeInterface<T> {
-	public boolean greaterThan(T value);
-	public boolean smallerThan(T value);
+public interface NodeInterface {
+	public boolean greaterThan(Double value);
+	public boolean smallerThan(Double value);
 }

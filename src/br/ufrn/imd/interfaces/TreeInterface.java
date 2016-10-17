@@ -10,12 +10,12 @@ package br.ufrn.imd.interfaces;
  * @author Pedro Paulo Paiva de Medeiros
  *
  */
-public interface TreeInterface<T> {
-	public void insert(T element);
+public interface TreeInterface {
+	public void insert(Double element);
 	
-	public void delete(T element);
+	public void delete(Double element);
 	
-	public T search(T value);
+	public Number search(Double value);
 	
 	public boolean isBST();
 }

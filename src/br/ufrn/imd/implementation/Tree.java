@@ -9,11 +9,11 @@ import br.ufrn.imd.interfaces.TreeInterface;
  * @author Pedro Paulo Paiva de Medeiros
  *
  */
-public class Tree<T> implements TreeInterface<T> {
+public class Tree implements TreeInterface {
 	/**
 	 * The tree root node
 	 */
-	private Node<T> root;
+	private Node root;
 
 	/**
 	 * The size of the tree
@@ -33,8 +33,9 @@ public class Tree<T> implements TreeInterface<T> {
 	 * Constructor of the tree setting the Root node
 	 * 
 	 * @param root
+	 * 			  the root to set
 	 */
-	public Tree(Node<T> root) {
+	public Tree(Node root) {
 		super();
 		this.root = root;
 	}
@@ -42,7 +43,7 @@ public class Tree<T> implements TreeInterface<T> {
 	/**
 	 * @return the root
 	 */
-	public Node<T> getRoot() {
+	public Node getRoot() {
 		return root;
 	}
 
@@ -50,7 +51,7 @@ public class Tree<T> implements TreeInterface<T> {
 	 * @param root
 	 *            the root to set
 	 */
-	public void setRoot(Node<T> root) {
+	public void setRoot(Node root) {
 		this.root = root;
 	}
 
@@ -75,8 +76,8 @@ public class Tree<T> implements TreeInterface<T> {
 	 * @see br.ufrn.imd.interfaces.TreeInterface#add(java.lang.Object)
 	 */
 	@Override
-	public void insert(T element) {
-		Node<T> actualNode = this.root;
+	public void insert(Double element) {
+		Node actualNode = this.root;
 		
 		boolean finded = false;
 		//search for the node where the new value should be inserted
@@ -102,9 +103,9 @@ public class Tree<T> implements TreeInterface<T> {
 		if(element == actualNode.getValue()){
 			actualNode.incrementCount();
 		} else if (actualNode.smallerThan(element)) {
-			actualNode.setRight(new Node<T>(element));
+			actualNode.setRight(new Node(element));
 		} else if (actualNode.greaterThan(element)) {
-			actualNode.setLeft(new Node<T>(element));
+			actualNode.setLeft(new Node(element));
 		}
 	}
 
@@ -114,7 +115,7 @@ public class Tree<T> implements TreeInterface<T> {
 	 * @see br.ufrn.imd.interfaces.TreeInterface#remove(java.lang.Object)
 	 */
 	@Override
-	public void delete(T element) {
+	public void delete(Double element) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -125,7 +126,7 @@ public class Tree<T> implements TreeInterface<T> {
 	 * @see br.ufrn.imd.interfaces.TreeInterface#search(java.lang.Object)
 	 */
 	@Override
-	public T search(T value) {
+	public Number search(Double value) {
 		// TODO Auto-generated method stub
 		return null;
 	}
