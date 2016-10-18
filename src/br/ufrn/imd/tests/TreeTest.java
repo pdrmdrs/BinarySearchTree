@@ -68,6 +68,9 @@ public class TreeTest {
 	 */
 	@Test
 	public void testSearch() {
+		
+		this.t.insert(new Double(6));
+		
 		assertEquals(this.t.search(new Double(6)), new Double(6));
 		assertEquals(this.t.search(new Double(3)), null);
 	}
