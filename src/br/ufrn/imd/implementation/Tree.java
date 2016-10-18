@@ -70,27 +70,30 @@ public class Tree implements TreeInterface {
 		this.size = size;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
+	 * Insert a new value on the Tree
+	 * 
+	 * @param value
+	 *            the value to insert in the tree
 	 * 
 	 * @see br.ufrn.imd.interfaces.TreeInterface#add(java.lang.Object)
 	 */
 	@Override
-	public void insert(Double element) {
+	public void insert(Double value) {
 		Node actualNode = this.root;
 		
 		boolean finded = false;
 		//search for the node where the new value should be inserted
 		do {
-			if (element == actualNode.getValue()) {
+			if (value == actualNode.getValue()) {
 				finded = true;
-			} else if (actualNode.smallerThan(element)) {
+			} else if (actualNode.smallerThan(value)) {
 				if(actualNode.getRight() != null){
 					actualNode = actualNode.getRight();
 				} else {
 					finded = true;
 				}
-			} else if (actualNode.greaterThan(element)) {
+			} else if (actualNode.greaterThan(value)) {
 				if(actualNode.getLeft() != null){
 					actualNode = actualNode.getLeft();
 				} else {
@@ -100,12 +103,12 @@ public class Tree implements TreeInterface {
 		}while(!finded);
 		
 		//insert the new node
-		if(element == actualNode.getValue()){
+		if(value == actualNode.getValue()){
 			actualNode.incrementCount();
-		} else if (actualNode.smallerThan(element)) {
-			actualNode.setRight(new Node(element));
-		} else if (actualNode.greaterThan(element)) {
-			actualNode.setLeft(new Node(element));
+		} else if (actualNode.smallerThan(value)) {
+			actualNode.setRight(new Node(value));
+		} else if (actualNode.greaterThan(value)) {
+			actualNode.setLeft(new Node(value));
 		}
 	}
 
@@ -126,8 +129,31 @@ public class Tree implements TreeInterface {
 	 * @see br.ufrn.imd.interfaces.TreeInterface#search(java.lang.Object)
 	 */
 	@Override
-	public Number search(Double value) {
-		// TODO Auto-generated method stub
+	public Double search(Double value) {
+		
+		Node actualNode = this.root;
+		
+		boolean finded = false;
+		//search for the node where the new value should be inserted
+		do {
+			if (value == actualNode.getValue()) {
+				finded = true;
+				return actualNode.getValue();
+			} else if (actualNode.smallerThan(value)) {
+				if(actualNode.getRight() != null){
+					actualNode = actualNode.getRight();
+				} else {
+					finded = true;
+				}
+			} else if (actualNode.greaterThan(value)) {
+				if(actualNode.getLeft() != null){
+					actualNode = actualNode.getLeft();
+				} else {
+					finded = true;
+				}
+			}
+		}while(!finded);
+		
 		return null;
 	}
 
